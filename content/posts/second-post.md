@@ -45,3 +45,12 @@ This is embedded with Hugo shortcode!
 |------|-----------|
 |Header|Title      |
 |Paragraph|Text    |
+
+## Tips
+{{< admonition type=tip title="This is a tip" open=false >}}
+A **tip** banner
+{{< /admonition >}}
+Or
+{{< admonition note "This is a note" false >}}
+A **note** banner
+{{< /admonition >}}
