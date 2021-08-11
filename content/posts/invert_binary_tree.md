@@ -2,7 +2,8 @@
 title: "Invert binary tree"
 date: 2021-08-10T12:23:50-05:00
 draft: false
-tags: ['algo', 'trees']
+tags: ['trees']
+categories: ['Algo']
 ---
 # Invert a Binary Tree
 ## Overview & Problem Space

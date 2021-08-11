@@ -1,7 +1,8 @@
 ---
 title: "DDIA Notes Ch.6: Partitioning"
 date: 2021-08-10T21:26:38-05:00
-tags: ['system_design']
+tags: ['DDIA']
+categories: ['System_Design']
 author: 'Christian'
 draft: false
 ---

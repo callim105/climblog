@@ -1,47 +1,106 @@
 baseURL = "http://callim105.github.io/"
-languageCode = "en-us"
-title = "Christian's Dev Blog"
-theme = "cactus"
+# [en, zh-cn, fr, ...] determines default content language
+defaultContentLanguage = "en"
+# language code
+languageCode = "en"
+title = "Christian Lim"
+
+# Change the default theme to be use when building the site with Hugo
+theme = "LoveIt"
+
+[author]
+  name = "Christian Lim"
+  email = "christiananthonylim1@gmail.com"
+  link = ""
 
 [params]
-colortheme = "dark"
-mainSectionTitle = "Blog"
-mainSection = "posts"
-description = "Welcome to my brain dump. Technical musings and miscellaneous thoughts."
-staticDir = ['static']
-tagsOverview = true
+  # LoveIt theme version
+  version = "0.2.X"
 
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    title = "Info about me"
+    weight = 1
+  [[menu.main]]
+    identifier = "posts"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    name = "Posts"
+    url = "/posts/"
+    # title will be shown when you hover on this menu link
+    title = ""
+    weight = 2
+  [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "Tags"
+    url = "/tags/"
+    title = ""
+    weight = 3
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "Categories"
+    url = "/categories/"
+    title = ""
+    weight = 4
 
-# Main menu which appears below site header.
-[[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
-
-[[menu.main]]
-name = "Posts"
-url = "/posts"
-weight = 2
-
-[[menu.main]]
-name = "Tags"
-url = "/tags"
-weight = 3
-
-[[menu.main]]
-name = "About"
-url = "/about"
-weight = 4
-
-# syntax highlighting
+# Markup related configuration in Hugo
 [markup]
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = false
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = true
-    lineNumbersInTable = true
-    noClasses = true
-    style = "monokai"
-    tabWidth = 4
+    # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+    [markup.highlight]
+        noClasses = false
+        codeFences = true
+        guessSyntax = false
+        hl_Lines = ""
+        lineNoStart = 1
+        lineNos = true
+        lineNumbersInTable = true
+        style = "monokai"
+        tabWidth = 4
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params.search]
+  enable = true
+  # type of search engine ("lunr", "algolia")
+  type = "lunr"
+  # max index length of the chunked content
+  contentLength = 4000
+  # placeholder of the search bar
+  placeholder = ""
+  #  max number of results length
+  maxResultLength = 10
+  #  snippet length of the result
+  snippetLength = 30
+  #  HTML tag name of the highlight part in results
+  highlightTag = "em"
+  #  whether to use the absolute URL based on the baseURL in search index
+  absoluteURL = false
+  [params.search.algolia]
+    index = ""
+    appID = ""
+    searchKey = ""
+
+[params.footer]
+    enable = true
+    # LoveIt NEW | 0.2.0 Custom content (HTML format is supported)
+    custom = ''
+    # LoveIt NEW | 0.2.0 whether to show Hugo and theme info
+    hugo = false
+    # LoveIt NEW | 0.2.0 whether to show copyright info
+    copyright = true
+    # LoveIt NEW | 0.2.0 whether to show the author
+    author = true
+    # Site creation time
+    since = 2021
+
