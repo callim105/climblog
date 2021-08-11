@@ -1,8 +1,7 @@
 ---
-title: "Second Post"
+title: "Example post"
 date: 2021-08-05T20:51:32-05:00
 draft: false
-tags: ['corgi']
 ---
 
 # This is my second post
@@ -21,6 +20,28 @@ def hello():
     print("Hello world!")
 ```
 
-# CORGI SECTION!!!!
+## CORGI SECTION!!!!
 This is a corgi! I hope.
 ![Corgi](/images/corgi.jpeg)
+
+### Smaller section
+This is a smaller section.
+
+## Medium Section
+Yuuuup.
+
+## Youtube Embedding
+This is embedded with Hugo shortcode!
+
+{{< youtube 2xkNJL4gJ9E >}}
+
+## Tweet Embedding
+
+{{< tweet 877500564405444608 >}}
+
+### Markdown Table test
+
+|Syntax|Description|
+|------|-----------|
+|Header|Title      |
+|Paragraph|Text    |
